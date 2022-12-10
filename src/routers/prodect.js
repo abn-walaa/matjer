@@ -134,10 +134,14 @@ router.post('/precdects/discount/add', authAdmin, async (req, res) => {
         if (!prodect) {
             return res.status(404).send({ "error": "Not found" })
         }
-
+        if (req.body.prics > prodect.prics) {
+            return res.status(501).send({ "error": "u can't make discount bacuse the price on prodect is lower then new price" })
+        }
         prodect.old_prics = prodect.prics;
         prodect.prics = req.body.prics;
-        prodect.prics_discount_percent = Math.trunc((100 - ((prodect.prics / prodect.old_prics) * 100)));
+
+        prodect.prics_discount_percent = (100 - ((prodect.prics / prodect.old_prics) * 100));
+
 
         await prodect.save()
         res.send({ "done": true })
