@@ -1,0 +1,32 @@
+@media (max-width: 767px) {
+    .container {
+      width: auto;
+
+    }
+  }
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+    .cart .container{
+      width: auto;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+    .cart .container{
+      width: auto;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+    .cart .container{
+      width: auto;
+    }
+  }

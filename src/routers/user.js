@@ -14,7 +14,6 @@ routar.post('/user/logup', async function (req, res) {
     let theAlloawd = ["email", "password", "name", "age"]
     let theKeys = Object.keys(req.body)
     let check = theKeys.every(e => theAlloawd.includes(e))
-
     if (!check) {
         res.status(400).send({ "error": "inputs uncrouct" })
     }

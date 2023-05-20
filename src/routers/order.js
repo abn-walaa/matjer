@@ -18,6 +18,7 @@ router.post('/order/new', auth, checkdiscount, async (req, res) => {
     try {
         let order = new Order({ userID: req.user.id, adress: req.body.adress, phoneNumber: req.body.phoneNumber, discont: req.discont.id })
         let prics = 0;
+
         // اضافة معلومات الئ المنتجات
         req.body.prodects.forEach(e => {
             let whoMany = e.whoMany

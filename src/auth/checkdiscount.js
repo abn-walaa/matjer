@@ -3,9 +3,7 @@ let Discont = require('../db/module/discount')
 
 let auth = async function (req, res, next) {
     try {
-
         let discont = await Discont.findOne({ code: req.body.discont })
-
         if (!discont) {
             throw new Error('There is no code like that')
         }

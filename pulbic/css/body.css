@@ -1,0 +1,170 @@
+div.body {
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+    background-image: url(../s.png);
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+
+}
+
+div.body section {
+    width: 50%;
+}
+
+
+div.body::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: rgba(0, 0, 0, 0.742);
+
+}
+
+
+
+section.text {
+    position: relative;
+}
+
+section.text h1 {
+    font-size: 100px;
+    color: #feaa32;
+}
+
+section.text span {
+    color: #feaa32;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+
+
+div.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+div.buttons .btn-text {
+    text-decoration: none;
+    padding: 11px 50px;
+    display: block;
+    font-size: 20px;
+    color: white;
+}
+
+div.buttons .btn {
+    background: #d23441;
+    border-radius: 20px;
+}
+
+section.text .socal {
+    padding: 50px 5px 0 0;
+}
+
+section.text .socal img {
+    width: 30px;
+    margin-right: 5px;
+    position: relative;
+}
+
+div.ponits {
+    position: absolute;
+    position: absolute;
+    right: 75px;
+    bottom: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div span.ponits {
+    width: 10px;
+    height: 10px;
+
+    background: #d93b4c;
+    display: block;
+    border-radius: 50%;
+}
+
+div.ponits :first-child {
+    background-color: #feaa32;
+}
+
+button.mob {
+    display: none;
+}
+
+
+.body::after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    color: #fff;
+    left: 0;
+    padding: 62px 25px 5px;
+    background: linear-gradient(to top, rgb(0 0 0 / 11%), rgb(0 0 0 / 0%));
+}
+
+
+
+.text-between h2 {
+    margin: 30px auto;
+    text-align: center;
+    /* border-bottom: 1px solid; */
+    width: fit-content;
+    border-bottom: red solid;
+    padding: 10px;
+    /* font-family: ui-monospace; */
+    font-size: 40px;
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+@media (max-width: 1400px) {
+    section.text h1 {
+        font-size: 85px;
+        color: #feaa32;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    section.text h1 {
+        font-size: 80px;
+        color: #feaa32;
+    }
+
+    div.body section {
+        width: 70%;
+    }
+}
+
+@media (max-width: 850px) {
+
+    section.text h1 {
+        font-size: 50px;
+        color: #feaa32;
+
+    }
+
+    div.body section {
+        width: 100%;
+        align-items: center;
+    }
+}
